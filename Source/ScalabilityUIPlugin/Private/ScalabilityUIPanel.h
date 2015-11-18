@@ -2,7 +2,8 @@
 #pragma once
 
 #include "Scalability.h"
-#include "Slate.h"
+//#include "Slate.h"
+#include "SlateBasics.h"
 
 /**
  * Scalability settings configuration widget                                                                  
@@ -26,10 +27,10 @@ public:
 private:
 
 	// Checks cached quality levels to see if the specified group is at the specified quality level
-	ESlateCheckBoxState::Type IsGroupQualityLevelSelected(const TCHAR* InGroupName, int32 InQualityLevel) const;
+	ECheckBoxState IsGroupQualityLevelSelected(const TCHAR* InGroupName, int32 InQualityLevel) const;
 
 	// Callback for when a particular scalability group has its quality level changed
-	void OnGroupQualityLevelChanged(ESlateCheckBoxState::Type NewState, const TCHAR* InGroupName, int32 InQualityLevel);
+	void OnGroupQualityLevelChanged(ECheckBoxState NewState, const TCHAR* InGroupName, int32 InQualityLevel);
 
 	// Callback for when the resolution scale slider changes
 	void OnResolutionScaleChanged(float InValue);

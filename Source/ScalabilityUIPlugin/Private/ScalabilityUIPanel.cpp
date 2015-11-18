@@ -6,7 +6,7 @@
 
 #define LOCTEXT_NAMESPACE "EngineScalabiltySettings"
 
-ESlateCheckBoxState::Type SScalabilityUIPanel::IsGroupQualityLevelSelected(const TCHAR* InGroupName, int32 InQualityLevel) const
+ECheckBoxState SScalabilityUIPanel::IsGroupQualityLevelSelected(const TCHAR* InGroupName, int32 InQualityLevel) const
 {
 	int32 QualityLevel = -1;
 
@@ -18,10 +18,10 @@ ESlateCheckBoxState::Type SScalabilityUIPanel::IsGroupQualityLevelSelected(const
 	else if (FCString::Strcmp(InGroupName, TEXT("TextureQuality")) == 0) QualityLevel = CachedQualityLevels.TextureQuality;
 	else if (FCString::Strcmp(InGroupName, TEXT("EffectsQuality")) == 0) QualityLevel = CachedQualityLevels.EffectsQuality;
 
-	return (QualityLevel == InQualityLevel) ? ESlateCheckBoxState::Checked : ESlateCheckBoxState::Unchecked;
+	return (QualityLevel == InQualityLevel) ? ECheckBoxState::Checked : ECheckBoxState::Unchecked;
 }
 
-void SScalabilityUIPanel::OnGroupQualityLevelChanged(ESlateCheckBoxState::Type NewState, const TCHAR* InGroupName, int32 InQualityLevel)
+void SScalabilityUIPanel::OnGroupQualityLevelChanged(ECheckBoxState NewState, const TCHAR* InGroupName, int32 InQualityLevel)
 {
 	if (FCString::Strcmp(InGroupName, TEXT("ResolutionQuality")) == 0) CachedQualityLevels.ResolutionQuality = InQualityLevel;
 	else if (FCString::Strcmp(InGroupName, TEXT("ViewDistanceQuality")) == 0) CachedQualityLevels.ViewDistanceQuality = InQualityLevel;
