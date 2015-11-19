@@ -7,7 +7,8 @@ What is it?
 ScalabilityUI is an Unreal Engine 4 plugin that triggers a poping up window when you start the game (but not the editor) and allow users to lower graphical settings to help them hit 75 fps.
 
 Like this:
-![Like this](https://github.com/spracle/ScalabilityUIPlugin/blob/master/Resources/Banner.png?raw=true)
+
+![Like this](https://github.com/spracle/ScalabilityUIPlugin/blob/master/Resources/example.png?raw=true)
 
 Features
 ---------------------------------------
