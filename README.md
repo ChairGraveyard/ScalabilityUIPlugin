@@ -1,6 +1,6 @@
 
 License: MIT
-[Like this](https://github.com/spracle/ScalabilityUIPlugin/blob/master/Resources/Banner.png?raw=true)
+![Like this](https://github.com/spracle/ScalabilityUIPlugin/blob/master/Resources/Banner.png?raw=true)
 
 What is it?
 ---------------------------------------
