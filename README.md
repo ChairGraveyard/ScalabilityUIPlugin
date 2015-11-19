@@ -1,5 +1,6 @@
 
 License: MIT
+[Like this](https://github.com/spracle/ScalabilityUIPlugin/blob/master/Resources/Banner.png?raw=true)
 
 What is it?
 ---------------------------------------
@@ -9,6 +10,8 @@ Features
 ---------------------------------------
 + You can change the banner image by replacing this file;
 Plugins\ScalabilityUIPlugin\Resources\Banner.png
+
++ Compatible to engine version 4.9 or newer
 
 Setting up the editor and project
 ---------------------------------------
