@@ -49,6 +49,7 @@ void SScalabilityUIPanel::OnResolutionScaleChanged(float InValue)
 	//Write the values into the ini
 	const TCHAR* OculusSettings = TEXT("Oculus.Settings");
 	GConfig->SetBool(OculusSettings, TEXT("bOverrideScreenPercentage"), CachedQualityLevels.ResolutionQuality < Scalability::MaxResolutionScale, GEngineIni);
+	GConfig->SetBool(OculusSettings, TEXT("bApplySystemOverridesOnStereo"), CachedQualityLevels.ResolutionQuality < Scalability::MaxResolutionScale, GEngineIni);
 	GConfig->SetFloat(OculusSettings, TEXT("ScreenPercentage"), (float)CachedQualityLevels.ResolutionQuality * 1.35f, GEngineIni);
 }
 
@@ -162,6 +163,8 @@ void SScalabilityUIPanel::Construct(const FArguments& InArgs)
 		.CreateTitleBar(false)
 		.SizingRule( ESizingRule::FixedSize )
 		.ClientSize(FVector2D(470, 410))
+		.ActivateWhenFirstShown(true)
+		.IsPopupWindow(true)
 		[
 			SNew(SVerticalBox)
 			+ SVerticalBox::Slot()
